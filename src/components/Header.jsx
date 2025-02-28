@@ -1,7 +1,8 @@
-export default function Header(){
+export default function Header({handleToggleMenu}){
     return (
         <header> 
-            hi
+            <button onClick={handleToggleMenu} className="open-nav-button"><i className="fa-solid fa-bars"></i></button>
+            <h1 className="text-gradient">PokeDash</h1>
         </header>
     )
 }
