@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { getFullPokedexNumber, getPokedexNumber } from "../utils";
+import { first151Pokemon, getFullPokedexNumber, getPokedexNumber } from "../utils";
 import  TypeCard  from "./TypeCard";
 import Modal from "./Modal";
 
@@ -124,7 +124,7 @@ export default function PokeCard({selectedPokemon}){
             </Modal>)}
             <div>
                 <h4>#{getFullPokedexNumber(selectedPokemon)}</h4>
-                <h2>{name}</h2>
+                <h2>{first151Pokemon[selectedPokemon]}</h2>
             </div>
             <div className="type-container">
               {types.map((typeObj,typeIndex)=>{
